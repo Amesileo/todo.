@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <h1>to<span style="color:mediumseagreen">do</span>.app</h1>
+    <div class="todo-container">
+        <form id="todoForm" class="todo-form">
+            <input type="text" onkeyup="remainingChars()" id="todoInput" placeholder="Enter a new todo" required">
+            <select id="colorSelector">
+                <option value="grey" style="background-color: grey; color: grey;">Grey</option>
+                <option value="red" style="background-color: red; color: red;">Red</option>
+                <option value="green" style="background-color: green; color: green;">Green&nbsp;</option>
+                <option value="blue" style="background-color: blue; color: blue;">Blue</option>
+                <option value="yellow" style="background-color: yellow; color: yellow;">Yellow</option>
+                <option value="purple" style="background-color: purple; color: purple;">Purple</option>
+                <option value="pink" style="background-color: pink; color: pink;">Pink</option>
+                <option value="orange" style="background-color: orange; color: orange;">Orange</option>
+            </select>
+            <button type="submit">add</button>
+            <div id="postInfo" style="margin-bottom: 10px; flex-grow: 100%;">
+                <div style="padding-left: 10px;">
+                    <span id="charCount">40</span><span> characters remaining</span>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    </div>
+    <div style="width: 80%; padding: 10px;">
+    <ul id="todoList" class="todo-list"></ul>
+    </div>
+    <script src="script.js"></script>
+    <div class="footer">
+        <div style="display: flex; gap: 10px;">
+            <span style="justify-self: center; align-self: center; margin-left: auto;">Crafted by George William James<span style="color: hsl(46, 100%, 62%);">.</span></span><div></div><a href="https://www.georgewilliamjames.co.uk"><img src="./Headshot.jpg" style="width: 24px; border-radius: 15px; margin-top: 5px;"></a>
+         </div>
+    </div>
+</body>
+</html>

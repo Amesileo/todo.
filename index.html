@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Todo App</title>
+    <title>todo.app</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -23,7 +25,9 @@
                 <option value="orange" style="background-color: orange; color: orange;">Orange</option>
             </select>
             <button type="submit">add</button>
-            <div id="postInfo" style="margin-bottom: 10px; flex-grow: 100%;">
+            <button type="button" id="sortButton">Sort</button>
+            
+            <div id="postInfo" style="flex-grow: 100%;">
                 <div style="padding-left: 10px;">
                     <span id="charCount">40</span><span> characters remaining</span>
                 </div>

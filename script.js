@@ -107,3 +107,29 @@ function remainingChars() {
 
 // Load existing todos on page load
 loadTodos();
+
+// Enable drag-and-drop for the todo list
+new Sortable(todoList, {
+    animation: 150,
+    onEnd: () => saveTodos() // Save the new order after reordering
+});
+
+document.getElementById('sortButton').addEventListener('click', () => {
+    const items = Array.from(todoList.children);
+
+    items.sort((a, b) => {
+        const colorA = a.dataset.color || 'grey';
+        const colorB = b.dataset.color || 'grey';
+        const completedA = a.classList.contains('completed') ? 1 : 0;
+        const completedB = b.classList.contains('completed') ? 1 : 0;
+
+        if (completedA === completedB) {
+            return colorA.localeCompare(colorB); // Sort by color
+        }
+        return completedA - completedB; // Completed tasks go last
+    });
+
+    // Re-append sorted tasks
+    items.forEach(item => todoList.appendChild(item));
+    saveTodos(); // Save the new order
+});

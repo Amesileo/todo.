@@ -21,8 +21,8 @@ background: linear-gradient(144deg, rgba(131,58,180,.3) 0%, rgba(253,29,29,0.152
 }
 
 .footer {
-    position: absolute;
-    margin-top: calc(100vh - 60px);
+    /*position: absolute;
+    margin-top: calc(100vh - 60px);*/
     background: rgb(131,58,180);
 background: linear-gradient(144deg, rgba(131,58,180,.3) 0%, rgba(253,29,29,0.1522584033613445) 50%, rgba(252,176,69,.1) 100%);
     
